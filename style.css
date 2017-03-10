@@ -1,0 +1,53 @@
+body{
+  background-color: #CD6600; 
+}
+.header{
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+.header a{
+  color: white;
+}
+a:hover{
+  color: inherit;
+}
+.container{
+   padding: 10%;
+}
+
+input[type=search]{
+   width: 130px;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-size: 16px;
+    background-image: url('http://www.abc.net.au/res/bundles/2.0.5/images/icon-search-grey@1x.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+    cursor: pointer;
+}
+input[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+}
+input[type=search]:focus {
+  width: 100%;
+  border: 3px solid white;
+  outline: none;
+  border-radius: 30px;
+  width: 70%;
+  cursor: auto;
+}
+.result{
+  margin-top: 10px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 15px;
+  -webkit-animation: fadein 2s;
+}
+.result a{
+  color: inherit;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
