@@ -17,14 +17,14 @@ function getWikiArticles() {
         var button = "<button>Want to search for something else?</button>";
         //clear results div to put more results
         $("#results").html('');
-        for (var i = 1; i<10; i++){
+        for (var i = 0; i<10; i++){
           var title = api.query.search[i].title
+          var altered = title.split(' ').join('_')
+          var href="https://en.wikipedia.org/wiki/"+altered;
           var snippet = api.query.search[i].snippet;
-          var x = "<div class='result container'><h2><a href="+"https://en.wikipedia.org/wiki/"+title+" target='_blank'>"+title+"</a></h2><h4>"+snippet+"</div>";
+          var x = "<div class='result container'><h2><a href="+href+" target='_blank'>"+title+"</a></h2><h4>"+snippet+"</div>";
           $(x).appendTo("#results");
-          
         }
-        //$(button).appendTo("#results");
     }, 'jsonp');
     
     $("#searchform").submit(function(e) {
